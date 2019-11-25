@@ -1,0 +1,38 @@
+{% extends "layout.html" %} {% block body %}
+<div class="row">
+    <div class="card border-primary mb-5 col-md-7 container-fluid">
+        <h3 class="card-header">CHECKLIST Sistema CBOX</h3>
+        <div class="card-body">
+            <form action="enlace" method="POST">
+                <table class="table table-striped table-hover table-bordered table-sm bg-white">
+                    <thead>
+                        <tr>
+                            <td>Servicio</td>
+                            <td>Estado</td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Inspección Visual de SU (Led PWR=Verde ETH=Verde RF=Verde)</td>
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required>
+                                    <label class="form-check-label" for="inlineRadio1">Buen Estado</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" required>
+                                    <label class="form-check-label" for="inlineRadio2">Mal Estado</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" required>
+                                    <label class="form-check-label" for="inlineRadio3">Medianamente Bien</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </form>
+            {% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block body %}
+<div class="row">
+    <div class="card border-primary mb-5 col-md-7 container-fluid">
+        <h3 class="card-header">Equipos MERT en Inventario</h3>
+        <div class="card-body">
+            <form action="tabla_incidentes" method="POST">
+                <table class="table table-striped table-hover table-bordered table-sm bg-white">
+                    <thead>
+                        <tr>
+                            <td>Número de Incidente</td>
+                            <td>Localidad</td>
+                            <td>Resumen</td>
+                            <td>Equipo</td>
+                            <td>Prioridad</td>
+                            <td>Link</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for dato in datos %}
+                        <tr>
+                            <td>{{dato.0}}</td>
+                            <td>{{dato.1}}</td>
+                            <td>{{dato.2}}</td>
+                            <td>{{dato.3}}</td>
+                            <td>{{dato.4}}</td>
+                            <td>
+                                <a href="/enlace" class="btn btn-success">Enlance</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
