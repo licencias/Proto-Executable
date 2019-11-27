@@ -19,12 +19,14 @@
         <table class="striped">
             <thead>
                 <tr>
-                    <td>Número de Incidente</td>
+                    <td>Número de Requerimiento</td>
                     <td>Localidad</td>
                     <td>Resumen</td>
                     <td>Equipo</td>
                     <td>Prioridad</td>
-                    <td>Link</td>
+                    <td>Observaciones</td>
+                    <td>Inicio de actividades</td>
+                    <td>Resolución</td>
                 </tr>
             </thead>
             <tbody>
@@ -36,12 +38,20 @@
                     <td>{{dato.3}}</td>
                     <td>{{dato.4}}</td>
                     <td>
-                        <a href="/detalle" class="btn btn-success">Detalle</a>
+                        <a href="/requerimientos" class="btn btn-primary">Observaciones</a>
+                    </td>
+                    <td>
+                        <a href="/requerimientos" class="btn btn-success">Inicio de Atención</a>
+                    </td>
+                    <td>
+                        <a href="/requerimientos" class="btn btn-dark">Resolución</a>
                     </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        <hr>
+        <button class="btn btn-primary container-fluid"> exportar reporte</button>
     </form>
 </body>
 
